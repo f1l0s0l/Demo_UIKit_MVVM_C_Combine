@@ -8,7 +8,8 @@
 import UIKit
 
 protocol IMainCoordinator: AnyObject {
-    func switchToNextFlow(from currentCoordinator: ICoordinator)
+    func switchToTabBar()
+    func switchToLogin()
 }
 
 final class MainCoordinator {
@@ -57,14 +58,14 @@ final class MainCoordinator {
     }
     
     // Методы установки/переключения Flow
-    func setFlow(to newViewController: UIViewController) {
+    private func setFlow(to newViewController: UIViewController) {
         self.rootViewController.addChild(newViewController)
         newViewController.view.frame = self.rootViewController.view.bounds
         self.rootViewController.view.addSubview(newViewController.view)
         newViewController.didMove(toParent: self.rootViewController)
     }
     
-    func switchFlow(to newViewController: UIViewController) {
+    private func switchFlow(to newViewController: UIViewController) {
         self.rootViewController.children[0].willMove(toParent: nil)
         self.rootViewController.children[0].navigationController?.navigationBar.isHidden = true
         self.rootViewController.addChild(newViewController)
@@ -118,19 +119,18 @@ extension MainCoordinator: ICoordinator {
 
 extension MainCoordinator: IMainCoordinator {
     
-    func switchToNextFlow(from currentCoordinator: ICoordinator) {
-        switch currentCoordinator {
-        case let oldCoordinator as LoginCoordinator:
-            let newCoordinator = self.makeToTabBarCoordinator()
-            self.switchCoordinators(from: oldCoordinator, to: newCoordinator)
-            
-        case let oldCoordinator as TabBarCoordinator:
-            let newCoordinator = self.makeLoginCoordinator()
-            self.switchCoordinators(from: oldCoordinator, to: newCoordinator)
-            
-        default:
-            print("Ошибка! func switchToNextFlow in MainCoordinator")
-        }
+    func switchToTabBar() {
+        let tabBatCoordinator = self.makeToTabBarCoordinator()
+        self.addChildCoordinator(tabBatCoordinator)
+        self.switchFlow(to: tabBatCoordinator.start())
+        self.removeChildCoordinator(self.childCoordinators[0])
+    }
+    
+    func switchToLogin() {
+        let loginCoordinator = self.makeLoginCoordinator()
+        self.addChildCoordinator(loginCoordinator)
+        self.switchFlow(to: loginCoordinator.start())
+        self.removeChildCoordinator(self.childCoordinators[0])
     }
 
 }

@@ -52,6 +52,6 @@ extension LoginCoordinator: ICoordinator {
 
 extension LoginCoordinator: ILoginCoordinator {
     func switchToNextFlow() {
-        self.parentCoordinator?.switchToNextFlow(from: self)
+        self.parentCoordinator?.switchToTabBar()
     }
 }

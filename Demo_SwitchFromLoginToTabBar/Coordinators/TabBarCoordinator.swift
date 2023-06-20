@@ -96,7 +96,7 @@ extension TabBarCoordinator: ICoordinator {
 
 extension TabBarCoordinator: ITabBarCoordinator {
     func switchToNextFlow() {
-        self.parentCoordinator?.switchToNextFlow(from: self)
+        self.parentCoordinator?.switchToLogin()
     }
 
 }

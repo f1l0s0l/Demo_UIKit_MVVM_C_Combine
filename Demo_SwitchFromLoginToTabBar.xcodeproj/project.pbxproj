@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A46A3EAB2A41ED0400D1FC0E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A3EAA2A41ED0400D1FC0E /* String+Extension.swift */; };
+		A46A3EB12A41F63F00D1FC0E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A3EB02A41F63F00D1FC0E /* CustomButton.swift */; };
+		A46A3EB42A41FF6B00D1FC0E /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A3EB32A41FF6B00D1FC0E /* AlertNotification.swift */; };
 		A4A763552A22957A005FF392 /* LogincCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A7634F2A22957A005FF392 /* LogincCoordinator.swift */; };
 		A4A763562A22957A005FF392 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A763502A22957A005FF392 /* ProfileCoordinator.swift */; };
 		A4A763572A22957A005FF392 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A763512A22957A005FF392 /* TabBarCoordinator.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A46A3EAA2A41ED0400D1FC0E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A46A3EB02A41F63F00D1FC0E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A46A3EB32A41FF6B00D1FC0E /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		A4A763372A2294E1005FF392 /* Demo_SwitchFromLoginToTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_SwitchFromLoginToTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A763482A2294E6005FF392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A7634F2A22957A005FF392 /* LogincCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogincCoordinator.swift; sourceTree = "<group>"; };
@@ -57,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A46A3EA92A41ECF600D1FC0E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A46A3EAA2A41ED0400D1FC0E /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A46A3EAF2A41F62F00D1FC0E /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				A46A3EB02A41F63F00D1FC0E /* CustomButton.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		A46A3EB22A41FF5600D1FC0E /* PublicModel */ = {
+			isa = PBXGroup;
+			children = (
+				A46A3EB32A41FF6B00D1FC0E /* AlertNotification.swift */,
+			);
+			path = PublicModel;
+			sourceTree = "<group>";
+		};
 		A4A7632E2A2294E1005FF392 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +106,9 @@
 		A4A763392A2294E1005FF392 /* Demo_SwitchFromLoginToTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				A46A3EB22A41FF5600D1FC0E /* PublicModel */,
+				A46A3EAF2A41F62F00D1FC0E /* CustomUI */,
+				A46A3EA92A41ECF600D1FC0E /* Extension */,
 				A4A7635B2A229598005FF392 /* Application */,
 				A4A7634E2A22957A005FF392 /* Coordinators */,
 				A4A763602A2295B4005FF392 /* Login */,
@@ -219,13 +252,16 @@
 				A4A763582A22957A005FF392 /* ProtocolCoordinator.swift in Sources */,
 				A4A763572A22957A005FF392 /* TabBarCoordinator.swift in Sources */,
 				A4A763552A22957A005FF392 /* LogincCoordinator.swift in Sources */,
+				A46A3EB42A41FF6B00D1FC0E /* AlertNotification.swift in Sources */,
 				A4A763562A22957A005FF392 /* ProfileCoordinator.swift in Sources */,
 				A4A763682A2295BC005FF392 /* FeedViewModel.swift in Sources */,
 				A4A763742A22967C005FF392 /* ProfileViewModel.swift in Sources */,
 				A4A7635F2A229598005FF392 /* SceneDelegate.swift in Sources */,
 				A4A7635A2A22957A005FF392 /* FeedCoordinator.swift in Sources */,
 				A4A7635E2A229598005FF392 /* AppDelegate.swift in Sources */,
+				A46A3EAB2A41ED0400D1FC0E /* String+Extension.swift in Sources */,
 				A4A763642A2295B4005FF392 /* LoginViewController.swift in Sources */,
+				A46A3EB12A41F63F00D1FC0E /* CustomButton.swift in Sources */,
 				A4A763702A229645005FF392 /* ProfileViewController.swift in Sources */,
 				A4A763692A2295BC005FF392 /* FeedViewController.swift in Sources */,
 				A4A763632A2295B4005FF392 /* LoginViewModel.swift in Sources */,
